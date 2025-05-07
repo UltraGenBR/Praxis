@@ -4,7 +4,7 @@ from agents import Agent, function_tool
 from agents.extensions.visualization import draw_graph
 import hashlib
 
-# Ferramenta para registrar uma ideia e gerar um ID
+# Tool to register an idea and generate an ID
 @function_tool
 def register_idea(user_id: str, idea: str) -> dict:
     idea_id = hashlib.sha256(f"{user_id}:{idea}".encode()).hexdigest()[:10]
